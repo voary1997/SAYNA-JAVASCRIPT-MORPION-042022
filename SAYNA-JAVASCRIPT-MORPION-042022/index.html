@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="index.js"></script>
+</head>
+<body>
+
+
+    <!--------choisissez votre pion---------->
+    <div class="layer">
+        <h1> choix de l'equipe</h1>
+        <button id="player1" class="btn btn-primary choose" onclick="startMorpion(this.id)">X</button>
+        <button id="player2" class="btn btn-primary choose" onclick="startMorpion(this.id)">O</button>
+    </div>
+
+    <!---------------Affichage gain------------------->
+      <div class="layer2">
+          <h1 id="legagnant">On a gagné</h1>
+          <button class="btn btn-primary end-game" onclick="winnershow()">Close</button>
+      </div>
+
+      <!------------------Match null------------------------->
+      <div class="layer3">
+        <h1 class="btn btn-primary draw" onclick="matchNull">Try Again</h1>
+      </div>
+
+      <div class="container" style="display: flex; justify-content: center; padding: 20px;">
+          <h1>Tic-Tac-Toe</h1>
+      </div>
+
+   <div class='row range'>
+    <div class='col-6 turn player-turn row'>
+        <div class='col-6 score you-score'>0</div>
+        <div class='col-6 you-name' onclick='player1()'>YOU</div>
+    </div>
+    <div class='col-6 turn cpu-turn row'>
+        <div class='col-6 cpu-score'>0</div>
+        <div class='col-6' onclick='player2()'>CPU</div>
+      
+    </div>
+    <div id="showChange"></div>
+</div>
+
+<div class='grid-container'>
+    <div class='grid-item' id='item1' onclick='choiseCase(this.id)'></div>
+    <div class='grid-item' id='item2' onclick='choiseCase(this.id)'></div>
+    <div class='grid-item' id='item3' onclick='choiseCase(this.id)'></div>
+    <div class='grid-item' id='item4' onclick='choiseCase(this.id)'></div>
+    <div class='grid-item' id='item5' onclick='choiseCase(this.id)'></div>
+    <div class='grid-item' id='item6' onclick='choiseCase(this.id)'></div>
+    <div class='grid-item' id='item7' onclick='choiseCase(this.id)'></div>
+    <div class='grid-item' id='item8' onclick='choiseCase(this.id)'></div>
+    <div class='grid-item' id='item9' onclick='choiseCase(this.id)'></div>
+</div>
+
+    <div class="button">
+        <button>Reset</button>
+    </div>
+</div>
+
+
+</body>
+
+</html>
